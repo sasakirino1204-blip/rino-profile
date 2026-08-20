@@ -39,7 +39,7 @@
 
   .ataglance{ font-size:0.84rem; color:var(--ink-soft); margin:8px 0 0; max-width:26em; }
 
-  header{ display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:8px; padding-bottom:28px; border-bottom:1px solid var(--line); }
+  header{ display:flex; flex-direction:column; gap:16px; margin-bottom:8px; padding-bottom:28px; border-bottom:1px solid var(--line); }
   header .id-row{ display:flex; align-items:center; gap:16px; }
   header .photo{
     flex:none; width:84px; height:84px; border-radius:6px; overflow:hidden;
@@ -48,11 +48,10 @@
   header .photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 18%; display:block; }
   header .name-block h1{ font-size:clamp(1.7rem,5vw,2.15rem); font-weight:600; margin:0 0 6px; text-wrap:balance; }
   header .name-block .romaji{ font-size:0.78rem; letter-spacing:0.12em; color:var(--ink-soft); text-transform:uppercase; }
-  header .org-block{ text-align:right; font-size:0.84rem; color:var(--ink-soft); line-height:1.7; white-space:nowrap; }
+  header .org-block{ text-align:left; font-size:0.84rem; color:var(--ink-soft); line-height:1.7; padding-left:100px; }
   header .org-block .role{ color:var(--accent); font-weight:600; }
-  @media (max-width:480px){
-    header{ flex-direction:column; }
-    header .org-block{ text-align:left; white-space:normal; }
+  @media (max-width:520px){
+    header .org-block{ padding-left:0; }
   }
 
   p.summary{ font-size:1rem; margin:28px 0 40px; max-width:34em; }
